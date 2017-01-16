@@ -10,19 +10,19 @@
                 <div class='col-xs-12 col-sm-6'>
                     <div class="form-group">
                         <label class="control-label" for="firstname">First Name</label>  
-                        <input class="form-control input-md" id="firstname" name="firstname" type="text" placeholder="First Name" ng-model="formData.firstName" required="">   
+                        <input class="form-control input-md" id="firstname" name="firstname" type="text" placeholder="First Name" [(ngModel)]="formData.firstName" required="">   
                     </div>
                 </div>
                 <div class='col-xs-12 col-sm-6'>
                     <div class="form-group">
                         <label class="control-label" for="lastname">Last Name</label>  
-                        <input class="form-control input-md" id="lastname" name="lastname" type="text" placeholder="Last Name" ng-model="formData.lastName" required="">
+                        <input class="form-control input-md" id="lastname" name="lastname" type="text" placeholder="Last Name" [(ngModel)]="formData.lastName" required="">
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label" for="email">Email</label>
-                <input class="form-control input-md" id="email" name="email" type="text" placeholder="Email" ng-model="formData.email" required="">
+                <input class="form-control input-md" id="email" name="email" type="text" placeholder="Email" [(ngModel)]="formData.email" required="">
             </div>
 
             <div class="form-group text-center">

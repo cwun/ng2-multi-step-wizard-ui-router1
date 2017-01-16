@@ -1,7 +1,7 @@
 var uirVer = '1.0.0-beta.3';
 var rxjsVer = '5.0.0-beta.12';
 var ng2Ver = '2.1.2';
-var ng2Pkgs = ['core', 'compiler', 'common', 'http', 'platform-browser-dynamic', 'platform-browser'];
+var ng2Pkgs = ['core', 'compiler', 'common', 'forms', 'http', 'platform-browser-dynamic', 'platform-browser'];
 
 System.config({
   //use typescript for compilation

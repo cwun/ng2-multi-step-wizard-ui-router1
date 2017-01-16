@@ -9,26 +9,26 @@
 
                 <div class="form-group">
                     <label class="control-label" for="street">Street Address</label>  
-                    <input class="form-control input-md" id="street" name="street" type="text" placeholder="Street Address" ng-model="vm.formData.street" required="">
+                    <input class="form-control input-md" id="street" name="street" type="text" placeholder="Street Address" [(ngModel)]="formData.street" required="">
                 </div>   
             
                 <div class="row">
                     <div class='col-xs-12 col-sm-5'>
                         <div class="form-group">
                             <label class="control-label" for="city">City</label>  
-                            <input class="form-control input-md" id="city" name="city" type="text" placeholder="City" ng-model="formData.city" required="">
+                            <input class="form-control input-md" id="city" name="city" type="text" placeholder="City" [(ngModel)]="formData.city" required="">
                         </div>
                     </div>
                     <div class='col-xs-4 col-sm-offset-1 col-sm-2'>
                         <div class="form-group">
                             <label class="control-label" for="state">State</label>  
-                            <input class="form-control input-md" id="state" name="state" type="text" ng-model="formData.state" required="">
+                            <input class="form-control input-md" id="state" name="state" type="text" [(ngModel)]="formData.state" required="">
                         </div>
                     </div>
                     <div class='col-xs-offset-1 col-xs-7 col-sm-offset-1 col-sm-3'>
                         <div class="form-group">
                             <label class="control-label" for="zip">Zip</label>  
-                            <input class="form-control input-md" id="zip" name="zip" type="text" placeholder="Zip" ng-model="formData.zip" required="">
+                            <input class="form-control input-md" id="zip" name="zip" type="text" placeholder="Zip" [(ngModel)]="formData.zip" required="">
                         </div>  
                     </div> 
                 </div>
