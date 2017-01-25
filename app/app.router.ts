@@ -1,4 +1,6 @@
 import { Inject, Injectable } from "@angular/core";
+import { appStates }          from "./app.states";
+
 import { UIRouter }           from "ui-router-ng2";
 
 import { FormDataService }    from './data/formData.service'

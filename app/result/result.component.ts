@@ -1,5 +1,4 @@
 import { Component, OnInit, Input }   from '@angular/core';
-import { Subscription }        from 'rxjs/Subscription';
 
 import { FormDataService }     from 'app/data/formData.service'
 
@@ -9,7 +8,7 @@ import { FormDataService }     from 'app/data/formData.service'
 })
 
 export class ResultComponent implements OnInit {
-    title = 'Result';
+    title = 'Thanks for staying tuned!';
     @Input() formData;
     
     constructor(private formDataService: FormDataService) {
@@ -17,7 +16,6 @@ export class ResultComponent implements OnInit {
 
     ngOnInit() {
         this.formData = this.formDataService.getData();
-        console.log(this.title + ' loaded!');
-        console.log(this.formData);
+        console.log('Result feature loaded!');
     }
 }

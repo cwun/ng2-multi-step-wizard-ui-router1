@@ -1,8 +1,7 @@
 import { Component, OnInit, Input, OnDestory }   from '@angular/core';
 
-import { FormData }       from 'app/data/formData.model';
-
-import { FormDataService }            from 'app/data/formData.service'
+import { FormData }                              from 'app/data/formData.model';
+import { FormDataService }                       from 'app/data/formData.service'
 
 @Component ({
     selector:     'mt-wizard-personal'
@@ -10,7 +9,7 @@ import { FormDataService }            from 'app/data/formData.service'
 })
 
 export class PersonalComponent implements OnInit, OnDestroy {
-    title = 'Personal';
+    title = 'Please tell us about yourself.';
     @Input() formData: FormData;
     
     constructor(private formDataService: FormDataService) {
@@ -18,12 +17,10 @@ export class PersonalComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.formData = this.formDataService.getData();
-        console.log(this.title + ' loaded!');
-        console.log(this.formData);
+        console.log('Personal feature loaded!');
     }
 
     ngOnDestroy() {
         this.formDataService.setData(this.formData);
-        console.log(this.title + ' unloaded!');
     }
 }

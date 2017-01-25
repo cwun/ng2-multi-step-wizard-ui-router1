@@ -8,7 +8,7 @@ import { FormDataService }     from 'app/data/formData.service'
 })
 
 export class WorkComponent implements OnInit, OnDestory {
-    title = 'Work';
+    title = 'What do you do?';
     @Input() formData;
     
     constructor(private formDataService: FormDataService) {
@@ -16,12 +16,10 @@ export class WorkComponent implements OnInit, OnDestory {
 
     ngOnInit() {
         this.formData = this.formDataService.getData();
-        console.log(this.title + ' loaded!');
-        console.log(this.formData);
+        console.log('Work feature loaded!');
     }
 
     ngOnDestroy() {
         this.formDataService.setData(this.formData);
-        console.log(this.title + ' unloaded!');
     }
 }

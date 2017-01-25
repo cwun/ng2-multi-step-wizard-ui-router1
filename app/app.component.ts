@@ -1,7 +1,6 @@
 import { Component, OnInit, Input }   from '@angular/core';
 import { UIROUTER_DIRECTIVES }        from "ui-router-ng2";
 
-
 import { FormDataService }            from 'app/data/formData.service'
 
 @Component ({
@@ -11,7 +10,7 @@ import { FormDataService }            from 'app/data/formData.service'
 })
 
 export class AppComponent implements OnInit {
-    title = 'Create a Profile';
+    title = 'Multi-Step Wizard';
     @Input() formData;
     
     constructor(private formDataService: FormDataService) {
@@ -20,6 +19,5 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this.formData = this.formDataService.getData();
         console.log(this.title + ' loaded!');
-        console.log(this.formData);
     }
 }

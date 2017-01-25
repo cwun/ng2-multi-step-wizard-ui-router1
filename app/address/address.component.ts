@@ -8,7 +8,7 @@ import { FormDataService }     from 'app/data/formData.service'
 })
 
 export class AddressComponent implements OnInit, OnDestroy {
-    title = 'Address';
+    title = 'Where do you live?';
     @Input() formData;
     
     constructor(private formDataService: FormDataService) {
@@ -16,12 +16,10 @@ export class AddressComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.formData = this.formDataService.getData();
-        console.log(this.title + ' loaded!');
-        console.log(this.formData);
+        console.log('Address feature loaded!');
     }
 
     ngOnDestroy() {
         this.formDataService.setData(this.formData);
-        console.log(this.title + ' unloaded!');
     }
 }

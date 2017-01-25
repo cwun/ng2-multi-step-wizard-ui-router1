@@ -1,56 +1,19 @@
 <section style="background:#efefe9;">
     <div class="container">
         <div class="board">
-            <div class="board-inner" id="status-buttons">
-                <ul class="nav nav-tabs" id="myTab">
-                    <div class="liner"></div>
-                    
-                    <li>
-                        <a uiSrefActive="active" uiSref="personal" data-toggle="tab" title="personal">
-                            <span class="round-tabs one">
-                                <i class="glyphicon glyphicon-user"></i>
-                            </span>
-                        </a>
-                    </li>
+            <!-- Navigation Area (Circular Tabs) -->
+            <msw-navbar></msw-navbar>
+            <!-- End Navigation Area (Circular Tabs) -->
 
-                    <li>
-                        <a uiSrefActive="active" uiSref="work" data-toggle="tab" title="work">
-                            <span class="round-tabs two">
-                                <i class="glyphicon glyphicon-tasks"></i>
-                            </span> 
-                        </a>
-                    </li>
-
-                    <li>
-                        <a uiSrefActive="active" uiSref="address" data-toggle="tab" title="address">
-                            <span class="round-tabs three">
-                                <i class="glyphicon glyphicon-home"></i>
-                            </span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a uiSrefActive="active" uiSref="result" data-toggle="tab" title="completed">
-                            <span class="round-tabs four">
-                                <i class="glyphicon glyphicon-ok"></i>
-                            </span>
-                        </a>
-                    </li>
-                
-                </ul>
-
-                <div class="clearfix"></div>
-
-            </div>
-
-            <!-- use ng-submit to catch the form submission and use our Angular function -->
+            <!-- Content Area -->
             <div class="tab-content">
+                <!-- Nested view  -->
                 <div ui-view></div>
             </div>
-
+            <!-- End Content Area -->
         </div>
 
-        <!-- show our formData as it is being typed -->
+        <!-- For Debugging: show our formData as it is being typed -->
         <pre>{{ formData | json }}</pre>
     </div>
 </section>
