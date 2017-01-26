@@ -7,9 +7,10 @@
     <!-- CSS Files -->
     <link rel="icon" type="image/png" href="content/images/favicon.ico" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" />
     <link rel="stylesheet" href="content/css/riliwan-rabo.css" />
     <link rel="stylesheet" href="content/css/style.css" />
+    <link rel="stylesheet" href="content/css/loading-bars.css" />
     
     <!-- IE required polyfills, in this exact order -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -24,7 +25,15 @@
 
   <body>
     <multi-step-wizard-app>
-        Loading...
+      <!-- Show simple splash screen-->
+      <div class="splash">
+          <div class="color-line"></div>
+              <div class="splash-title">
+                  <h1>Angular 2 Multi-Step Wizard</h1>
+                  <img src="content/images/loading-bars.svg" width="64" height="64" />
+              </div>
+          </div>
+      </div>
     </multi-step-wizard-app>
   </body>
 

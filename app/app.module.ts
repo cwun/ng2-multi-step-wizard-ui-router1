@@ -14,7 +14,7 @@ import { AddressComponent }   from './address/address.component';
 import { ResultComponent }    from './result/result.component';
 
 /* App Router */
-import { UIRouterConfigFn }     from "./app.router";
+import { UIRouterConfigFn }   from "./app.router";
 import { appStates }          from "./app.states";
 
 /* Shared Service */
