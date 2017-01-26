@@ -1,0 +1,38 @@
+{
+  "name": "ng2-multi-step-wizard",
+  "version": "1.0.0",
+  "description": "Multi-Step Wizard using UI-Router 1.0 for Angular 2",
+  "scripts": {
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
+  },
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/compiler-cli": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/platform-server": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "@angular/upgrade": "~2.4.0",
+    "angular-in-memory-web-api": "~0.2.4",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.3",
+    "systemjs": "0.19.40",
+    "zone.js": "^0.7.4",
+    "ui-router-ng2": "1.0.0-beta.4"
+  },
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "lite-server": "^2.2.2",
+    "typescript": "~2.0.10",
+
+    "@types/node": "^6.0.46"
+  },
+  "repository": {}
+}
