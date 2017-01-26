@@ -1,13 +1,13 @@
-import { Component, OnInit, Input, OnDestory }   from '@angular/core';
+import { Component, OnInit, Input, OnDestroy }   from '@angular/core';
 
-import { FormDataService }     from 'app/data/formData.service'
+import { FormDataService }                       from '../data/formData.service';
 
 @Component ({
     selector:     'mt-wizard-work'
     ,templateUrl: 'app/work/work.component.html'
 })
 
-export class WorkComponent implements OnInit, OnDestory {
+export class WorkComponent implements OnInit, OnDestroy {
     title = 'What do you do?';
     @Input() formData;
     

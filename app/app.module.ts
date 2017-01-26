@@ -14,7 +14,7 @@ import { AddressComponent }   from './address/address.component';
 import { ResultComponent }    from './result/result.component';
 
 /* App Router */
-import { UIRouterConfig }     from "./app.router";
+import { UIRouterConfigFn }     from "./app.router";
 import { appStates }          from "./app.states";
 
 /* Shared Service */
@@ -26,7 +26,7 @@ import { FormDataService }    from './data/formData.service'
                     UIRouterModule.forRoot({ 
                       states: appStates,
                       useHash: true,
-                      configClass: UIRouterConfig
+                      config: UIRouterConfigFn
                     }) 
                   ],
     providers:    [{ provide: FormDataService, useClass: FormDataService }],

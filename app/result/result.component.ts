@@ -1,6 +1,6 @@
 import { Component, OnInit, Input }   from '@angular/core';
 
-import { FormDataService }     from 'app/data/formData.service'
+import { FormDataService }            from '../data/formData.service';
 
 @Component ({
     selector:     'mt-wizard-result'

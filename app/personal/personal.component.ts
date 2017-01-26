@@ -1,7 +1,7 @@
-import { Component, OnInit, Input, OnDestory }   from '@angular/core';
+import { Component, OnInit, Input, OnDestroy }   from '@angular/core';
 
-import { FormData }                              from 'app/data/formData.model';
-import { FormDataService }                       from 'app/data/formData.service'
+import { FormData }                              from '../data/formData.model';
+import { FormDataService }                       from '../data/formData.service';
 
 @Component ({
     selector:     'mt-wizard-personal'
