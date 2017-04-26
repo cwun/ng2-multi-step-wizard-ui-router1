@@ -1,25 +1,30 @@
-import { Component, OnInit, Input, OnDestroy }   from '@angular/core';
+import { Component, OnInit }   from '@angular/core';
 
-import { FormDataService }                       from '../data/formData.service';
+import { Address }             from '../data/formData.model';
+import { FormDataService }     from '../data/formData.service';
 
 @Component ({
     selector:     'mt-wizard-address'
     ,templateUrl: 'app/address/address.component.html'
 })
 
-export class AddressComponent implements OnInit, OnDestroy {
+export class AddressComponent implements OnInit {
     title = 'Where do you live?';
-    @Input() formData;
+    address: Address;
+    form: any;
     
     constructor(private formDataService: FormDataService) {
     }
 
     ngOnInit() {
-        this.formData = this.formDataService.getData();
+        this.address = this.formDataService.getAddress();
         console.log('Address feature loaded!');
     }
 
-    ngOnDestroy() {
-        this.formDataService.setData(this.formData);
+    save(form: any) {
+        if (!form.valid) 
+            return;
+        
+        this.formDataService.setAddress(this.address);
     }
 }

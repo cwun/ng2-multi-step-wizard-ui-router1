@@ -6,7 +6,6 @@
     <p class="narrow text-center">
         Here is a copy of the information you have entered:
     </p>
-    <br/>
     <div class='row'>
         <div class='col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-8 col-md-offset-4 col-md-8'>
             <div class="row">
@@ -52,5 +51,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-success btn-outline-rounded" [disabled]="!isFormValid" (click)="submit()"> Submit <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
     </div>
 </div>

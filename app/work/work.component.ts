@@ -7,19 +7,23 @@ import { FormDataService }                       from '../data/formData.service'
     ,templateUrl: 'app/work/work.component.html'
 })
 
-export class WorkComponent implements OnInit, OnDestroy {
+export class WorkComponent implements OnInit {
     title = 'What do you do?';
-    @Input() formData;
+    workType: string;
+    form: any;
     
     constructor(private formDataService: FormDataService) {
     }
 
     ngOnInit() {
-        this.formData = this.formDataService.getData();
+        this.workType = this.formDataService.getWork();
         console.log('Work feature loaded!');
     }
 
-    ngOnDestroy() {
-        this.formDataService.setData(this.formData);
+    save(form: any) {
+        if (!form.valid) 
+            return;
+        
+        this.formDataService.setWork(this.workType);
     }
 }

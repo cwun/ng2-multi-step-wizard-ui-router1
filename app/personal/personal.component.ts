@@ -1,26 +1,30 @@
-import { Component, OnInit, Input, OnDestroy }   from '@angular/core';
+import { Component, OnInit }   from '@angular/core';
 
-import { FormData }                              from '../data/formData.model';
-import { FormDataService }                       from '../data/formData.service';
+import { Personal }            from '../data/formData.model';
+import { FormDataService }     from '../data/formData.service';
 
 @Component ({
     selector:     'mt-wizard-personal'
     ,templateUrl: 'app/personal/personal.component.html'
 })
 
-export class PersonalComponent implements OnInit, OnDestroy {
+export class PersonalComponent implements OnInit {
     title = 'Please tell us about yourself.';
-    @Input() formData: FormData;
+    personal: Personal;
+    form: any;
     
     constructor(private formDataService: FormDataService) {
     }
 
     ngOnInit() {
-        this.formData = this.formDataService.getData();
+        this.personal = this.formDataService.getPersonal();
         console.log('Personal feature loaded!');
     }
 
-    ngOnDestroy() {
-        this.formDataService.setData(this.formData);
+    save(form: any) {
+        if (!form.valid) 
+            return;
+        
+        this.formDataService.setPersonal(this.personal);
     }
 }

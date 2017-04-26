@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.formData = this.formDataService.getData();
+        this.formData = this.formDataService.getFormData();
         console.log(this.title + ' loaded!');
     }
 }
