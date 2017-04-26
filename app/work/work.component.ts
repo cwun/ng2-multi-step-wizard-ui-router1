@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, OnDestroy }   from '@angular/core';
+import { Component, OnInit }   from '@angular/core';
 
-import { FormDataService }                       from '../data/formData.service';
+import { FormDataService }     from '../data/formData.service';
 
 @Component ({
     selector:     'mt-wizard-work'
