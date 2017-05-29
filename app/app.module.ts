@@ -18,7 +18,8 @@ import { UIRouterConfigFn }   from "./app.router";
 import { appStates }          from "./app.states";
 
 /* Shared Service */
-import { FormDataService }    from './data/formData.service'
+import { FormDataService }    from './data/formData.service';
+import { WorkflowService }    from './workflow/workflow.service';
 
 @NgModule({
     imports:      [ BrowserModule, 
@@ -29,7 +30,8 @@ import { FormDataService }    from './data/formData.service'
                       config: UIRouterConfigFn
                     }) 
                   ],
-    providers:    [{ provide: FormDataService, useClass: FormDataService }],
+    providers:    [{ provide: FormDataService, useClass: FormDataService },
+                   { provide: WorkflowService, useClass: WorkflowService }],
     declarations: [ AppComponent, NavbarComponent, PersonalComponent, WorkComponent, AddressComponent, ResultComponent ],
     bootstrap:    [ AppComponent ]
 })
